@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tzkt/assets/assets.gen.dart';
 import 'package:tzkt/core/services/services.dart';
 import 'package:tzkt/utils/extenstions.dart';
@@ -45,10 +46,9 @@ class TransactionDetailPage extends StatelessWidget {
         title: Text(
           'Transaction details',
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: GoogleFonts.inter(
             color: Colors.black.withOpacity(0.949999988079071),
             fontSize: 16,
-            fontFamily: 'Inter',
             fontWeight: FontWeight.w600,
             height: 0.07,
           ),
@@ -93,10 +93,9 @@ class TransactionDetailPage extends StatelessWidget {
               const Gap(16),
               Text(
                 'View on blockchain explorer',
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Colors.black.withOpacity(0.949999988079071),
                   fontSize: 16,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -131,10 +130,9 @@ class DetailItem extends StatelessWidget {
           children: [
             Text(
               titleText,
-              style: TextStyle(
+              style: GoogleFonts.inter(
                 color: Colors.black.withOpacity(0.6000000238418579),
                 fontSize: 16,
-                fontFamily: 'Inter',
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -144,10 +142,9 @@ class DetailItem extends StatelessWidget {
               child: Text(
                 detailText,
                 textAlign: TextAlign.right,
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Colors.black.withOpacity(0.949999988079071),
                   fontSize: 16,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w400,
                 ),
               ),

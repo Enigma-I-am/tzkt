@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intersperse/intersperse.dart';
 
 import 'package:tzkt/assets/assets.gen.dart';
@@ -215,7 +216,7 @@ class MyAssetsSection extends StatelessWidget {
         if (state.status.isLoadingBtcTransactions ||
             state.status.isLoadingTezosTransactions) {
           context.navigate(TransactionsPage(
-            title: state.status.isLoadingTezosTransactions ? 'Tezos' : null,
+            title: state.status.isLoadingTezosTransactions ? 'Tezos' : 'BTC',
           ));
         }
       },
@@ -227,10 +228,9 @@ class MyAssetsSection extends StatelessWidget {
               children: [
                 Text(
                   'My assets',
-                  style: TextStyle(
+                  style: GoogleFonts.inter(
                     color: Colors.black.withOpacity(0.949999988079071),
                     fontSize: 16,
-                    fontFamily: 'Inter',
                     fontWeight: FontWeight.w600,
                     height: 0.07,
                   ),
@@ -239,10 +239,10 @@ class MyAssetsSection extends StatelessWidget {
                 Text(
                   'See all',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: GoogleFonts.inter(
                     color: Color(0xFF11A532),
                     fontSize: 14,
-                    fontFamily: 'Inter',
+
                     fontWeight: FontWeight.w600,
                     height: 0.10,
                   ),
@@ -301,20 +301,18 @@ class AssetsWidget extends StatelessWidget {
           children: [
             Text(
               coinName,
-              style: TextStyle(
+              style: GoogleFonts.inter(
                 color: Colors.black,
                 fontSize: 16,
-                fontFamily: 'Inter',
                 fontWeight: FontWeight.w400,
               ),
             ),
             Gap(2),
             Text(
               coinSymbol,
-              style: TextStyle(
+              style: GoogleFonts.inter(
                 color: Color(0xFF9BA0A5),
                 fontSize: 14,
-                fontFamily: 'Inter',
                 fontWeight: FontWeight.w400,
               ),
             )
@@ -345,10 +343,9 @@ class PercentageChange extends StatelessWidget {
       children: [
         Text(
           '₦24,500,00',
-          style: TextStyle(
+          style: GoogleFonts.inter(
             color: Colors.black,
             fontSize: 16,
-            fontFamily: 'Inter',
             fontWeight: FontWeight.w400,
           ),
         ),
@@ -377,10 +374,9 @@ class PumpDumpText extends StatelessWidget {
         Text(
           '1.76%',
           textAlign: TextAlign.end,
-          style: TextStyle(
+          style: GoogleFonts.inter(
             color: increase ? Color(0xFF11A532) : Color(0xFFC00F00),
             fontSize: 14,
-            fontFamily: 'Inter',
             fontWeight: FontWeight.w500,
           ),
         )
@@ -417,10 +413,9 @@ class MoversSection extends StatelessWidget {
             children: [
               Text(
                 'Today’s Top Movers',
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Colors.black.withOpacity(0.949999988079071),
                   fontSize: 16,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -428,10 +423,9 @@ class MoversSection extends StatelessWidget {
               Text(
                 'See all',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Color(0xFF11A532),
                   fontSize: 14,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -501,10 +495,9 @@ class MoversCardItem extends StatelessWidget {
           const Gap(16),
           Text(
             title,
-            style: TextStyle(
+            style: GoogleFonts.inter(
               color: Colors.black,
               fontSize: 16,
-              fontFamily: 'Inter',
               fontWeight: FontWeight.w400,
               height: 0.09,
             ),
@@ -532,10 +525,9 @@ class TrendingNewSection extends StatelessWidget {
             children: [
               Text(
                 'Trending news',
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Colors.black.withOpacity(0.949999988079071),
                   fontSize: 16,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w600,
                   height: 0.07,
                 ),
@@ -544,10 +536,9 @@ class TrendingNewSection extends StatelessWidget {
               Text(
                 'View more',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Color(0xFF11A532),
                   fontSize: 14,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -573,20 +564,18 @@ class TrendingNewSection extends StatelessWidget {
               const Gap(16),
               Text(
                 'Ethereum Co-founder opposes El-salvador Bitcoin Adoption policy',
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Colors.black,
                   fontSize: 14,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w400,
                 ),
               ),
               const Gap(8),
               Text(
                 'CoinDesk • 2h',
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Color(0xFF9BA0A5),
                   fontSize: 12,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -639,10 +628,9 @@ class TrendingNewItem extends StatelessWidget {
               width: context.screenWidth(.7),
               child: Text(
                 'Ethereum Co-founder opposes El-salvador Bitcoin Adoption policy',
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Colors.black,
                   fontSize: 14,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -650,10 +638,9 @@ class TrendingNewItem extends StatelessWidget {
             const Gap(8),
             Text(
               'CoinDesk • 2h',
-              style: TextStyle(
+              style: GoogleFonts.inter(
                 color: Color(0xFF9BA0A5),
                 fontSize: 12,
-                fontFamily: 'Inter',
                 fontWeight: FontWeight.w400,
                 height: 0.10,
               ),

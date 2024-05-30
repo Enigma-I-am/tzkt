@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intersperse/intersperse.dart';
 import 'package:tzkt/assets/assets.gen.dart';
 import 'package:tzkt/core/services/navigation.service.dart';
@@ -11,7 +12,7 @@ import 'package:tzkt/widgets/controller_bottom_nav.dart';
 import 'package:tzkt/widgets/touchable_opacity.dart';
 
 class TransactionsPage extends StatelessWidget {
-  const TransactionsPage({super.key, this.title = 'BTC'});
+  const TransactionsPage({super.key, this.title});
   final String? title;
 
   @override
@@ -31,7 +32,6 @@ class TransactionsPage extends StatelessWidget {
                 height: 100,
                 width: 100,
                 child: CircularProgressIndicator(
-                  
                   strokeCap: StrokeCap.round,
                   color: Color(0xff13A734),
                   strokeWidth: 8,
@@ -42,10 +42,9 @@ class TransactionsPage extends StatelessWidget {
               child: Text(
                 'Failed to load your transactions',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Colors.black,
                   fontSize: 18,
-                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -127,10 +126,9 @@ class TransactionsPage extends StatelessWidget {
             title: Text(
               '$title transactions',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: GoogleFonts.inter(
                 color: Colors.black.withOpacity(0.949999988079071),
                 fontSize: 16,
-                fontFamily: 'Inter',
                 fontWeight: FontWeight.w600,
                 height: 0.07,
               ),
@@ -175,7 +173,6 @@ class TransactionItem extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.black.withOpacity(0.949999988079071),
                     fontSize: 16,
-                    fontFamily: 'Inter',
                     fontWeight: FontWeight.w400,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -183,10 +180,9 @@ class TransactionItem extends StatelessWidget {
                 const Gap(8),
                 Text(
                   date,
-                  style: TextStyle(
+                  style: GoogleFonts.inter(
                     color: Colors.black.withOpacity(0.5600000023841858),
                     fontSize: 14,
-                    fontFamily: 'Inter',
                     fontWeight: FontWeight.w400,
                   ),
                 )

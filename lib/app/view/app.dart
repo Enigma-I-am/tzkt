@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tzkt/core/services/navigation.service.dart';
 import 'package:tzkt/counter/counter.dart';
 import 'package:tzkt/counter/view/login_page.dart';
@@ -19,7 +20,9 @@ class App extends StatelessWidget {
       ],
       child: MaterialApp(
         navigatorKey: navigator.key,
+        
         theme: ThemeData(
+          textTheme:GoogleFonts.interTextTheme(),
           appBarTheme: AppBarTheme(
             backgroundColor: white,
           ),
